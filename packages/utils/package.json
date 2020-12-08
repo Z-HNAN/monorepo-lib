@@ -1,0 +1,47 @@
+{
+  "name": "utils",
+  "version": "0.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "scripts": {
+    "test": "jest --config ../../jest.config.json",
+    "dev": "rollup -w -c --environment FORMAT:esm",
+    "build:cjs": "rollup -c --environment FORMAT:cjs",
+    "build:esm": "rollup -c --environment FORMAT:esm",
+    "build:umd": "rollup -c --environment FORMAT:umd",
+    "build:min": "rollup -c --environment FORMAT:min",
+    "build": "rimraf lib/* es/* dist/* types/* && run-p build:cjs build:esm build:umd build:min",
+    "clean": "rimraf lib/* es/* dist/* types/*"
+  },
+  "keywords": [],
+  "author": "Z-HNAN <zhn68033@163.com>",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "unpkg": "dist/index.js",
+  "module": "es/index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src",
+    "types",
+    "LICENSE",
+    "README.md"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "publishConfig": {
+    "registry": "https://bnpm.byted.org/"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.11.2"
+  },
+  "devDependencies": {
+
+  },
+  "browserslist": [
+    "ie >= 11"
+  ]
+}

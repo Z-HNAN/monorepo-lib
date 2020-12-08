@@ -1,0 +1,11 @@
+dist
+es
+lib
+node_modules
+*.d.ts
+coverage/
+
+
+.eslintrc.js
+babel.config.js
+rollup.config.js
